@@ -35,14 +35,14 @@ like so:
 # blog_ac.conf
 
 # We want each request to be a tuple of three items, in which first item
-# associated with the attribute named `sub`, second `obj` and third `act`.
+# associated with the attribute named `sub` (subject), second `obj` (object) and third `act` (action).
 # An example of a valid request based on this definition is
 # `["alice, "blog_post", "read"]` (can `alice` `read` `blog_post`?).
 [request_definition]
 r = sub, obj, act
 
 # Each policy definition should have a key and a list of attributes separated by
-# an equal `=` sign. In Acx all policy rules have in common the `eft` attribute
+# an equal `=` sign. In Acx all policy rules have in common the `eft` (effect) attribute
 # and it can only take value of either `"allow"` or `"deny"`, so you can ommit
 # it in your policy definition.
 [policy_definition]
